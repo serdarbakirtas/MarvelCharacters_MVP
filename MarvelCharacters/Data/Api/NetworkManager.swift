@@ -21,9 +21,6 @@ class ApiService: ApiServiceType {
     func createSingleRequest<Request>(from request: Request,
                                       completion: @escaping (Result<Request.Response, Error>) -> Void)
     where Request: APIRequestType {
-        let decorder = JSONDecoder()
-        decorder.dateDecodingStrategy = .iso8601
-        
         let encoding: ParameterEncoding = (request.method() == .post ||
                                             request.method() == .put ||
                                             request.method() == .patch) ? JSONEncoding.default : URLEncoding.default
@@ -38,7 +35,6 @@ class ApiService: ApiServiceType {
                 guard let data = responseJSON.data else { return }
                 do {
                     let decoder = JSONDecoder()
-                    decoder.dateDecodingStrategy = .iso8601
                     let response = try decoder.decode(Request.Response.self, from: data)
                     completion(.success(response))
                 } catch let error {

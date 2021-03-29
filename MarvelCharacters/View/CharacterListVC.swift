@@ -27,7 +27,6 @@ class CharacterListVC: UIViewController {
     
     private var presenter: CharacterListPresenter<CharacterListVC>!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
