@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F0043DD261E728A006146D2 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0043DC261E728A006146D2 /* ListView.swift */; };
 		9F7944D0260FA1FC00C4A5EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7944CF260FA1FC00C4A5EA /* AppDelegate.swift */; };
 		9F7944D9260FA1FD00C4A5EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F7944D8260FA1FD00C4A5EA /* Assets.xcassets */; };
 		9F7944DC260FA1FD00C4A5EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F7944DA260FA1FD00C4A5EA /* LaunchScreen.storyboard */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F0043DC261E728A006146D2 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		9F7944CC260FA1FC00C4A5EA /* MarvelCharacters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelCharacters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F7944CF260FA1FC00C4A5EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F7944D8260FA1FD00C4A5EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 			children = (
 				9F79451B260FA2E000C4A5EA /* CharacterListVC.swift */,
 				9F794523260FA2FB00C4A5EA /* CharacterListPresenter.swift */,
+				9F0043DC261E728A006146D2 /* ListView.swift */,
 				9F794533260FA41700C4A5EA /* CharacterListCell.swift */,
 			);
 			path = View;
@@ -338,6 +341,7 @@
 			files = (
 				9F794524260FA2FB00C4A5EA /* CharacterListPresenter.swift in Sources */,
 				9F79453A260FA6F500C4A5EA /* CharacterListViewModel.swift in Sources */,
+				9F0043DD261E728A006146D2 /* ListView.swift in Sources */,
 				9F7944D0260FA1FC00C4A5EA /* AppDelegate.swift in Sources */,
 				9F794543260FA75400C4A5EA /* NetworkManager.swift in Sources */,
 				9F794534260FA41700C4A5EA /* CharacterListCell.swift in Sources */,

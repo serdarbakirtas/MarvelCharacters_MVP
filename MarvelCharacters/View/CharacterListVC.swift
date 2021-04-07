@@ -16,14 +16,7 @@ class CharacterListVC: UIViewController {
     private let CELL_HEIGHT: CGFloat = 40.0
     
     // MARK: UI
-    lazy var tableUserList: UITableView = {
-        let tb = UITableView()
-        tb.translatesAutoresizingMaskIntoConstraints = false
-        tb.backgroundColor = .white
-        tb.separatorStyle = .none
-        tb.register(CharacterListCell.self, forCellReuseIdentifier: "CharacterListCell")
-        return tb
-    }()
+    private lazy var contentView = ListView()
     
     private var presenter: CharacterListPresenter<CharacterListVC>!
     
@@ -33,21 +26,9 @@ class CharacterListVC: UIViewController {
         presenter = CharacterListPresenter(view: self)
         presenter.loadCharacterList()
         
-        addSubviews()
-        tableUserList.dataSource = self
-        tableUserList.delegate = self
-    }
-    
-    // MARK: Subviews
-    private func addSubviews() {
-        view.addSubview(tableUserList)
-        
-        NSLayoutConstraint.activate([
-            tableUserList.topAnchor.constraint(equalTo: view.topAnchor),
-            tableUserList.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            tableUserList.leftAnchor.constraint(equalTo: view.leftAnchor),
-            tableUserList.rightAnchor.constraint(equalTo: view.rightAnchor),
-        ])
+        view = contentView
+        contentView.tableView.dataSource = self
+        contentView.tableView.delegate = self
     }
 }
 
@@ -55,7 +36,7 @@ class CharacterListVC: UIViewController {
 extension CharacterListVC: CharacterListView {
     
     func reloadTable() {
-        tableUserList.reloadData()
+        contentView.tableView.reloadData()
     }
 }
 
